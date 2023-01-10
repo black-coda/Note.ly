@@ -32,6 +32,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_slidable: ^2.0.0
   http: ^0.13.5
   provider: ^6.0.5
 
@@ -61,16 +62,15 @@ flutter:
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
- 
   fonts:
     - family: Pfd
       fonts:
         - asset: assets/font/Pfd.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
+    - family: Aleo
+      fonts:
+        - asset: fonts/Aleo.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

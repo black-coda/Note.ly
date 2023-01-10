@@ -18,6 +18,15 @@ class AppWidget extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 8, 25, 46),
           appBar: extractedAppBar(),
           body: const AppBody(),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {},
+            elevation: 10,
+            foregroundColor: Colors.white,
+            backgroundColor: Color.fromARGB(255, 21, 39, 82),
+            child: Icon(Icons.add),
+          ),
         ),
       ),
     );
@@ -25,33 +34,35 @@ class AppWidget extends StatelessWidget {
 
   AppBar extractedAppBar() {
     return AppBar(
-        centerTitle: true,
-        elevation: 0,
-        title: const Text(
-          "Note.ly",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-            letterSpacing: 2.8,
+      centerTitle: true,
+      elevation: 0,
+      title: const Text(
+        "Note.ly",
+        style: TextStyle(
+          fontFamily: 'Aleo',
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+          letterSpacing: 2.8,
+        ),
+      ),
+      leading: const Padding(
+        padding: EdgeInsets.all(5.0),
+        child: CircleAvatar(
+          backgroundColor: Color.fromARGB(200, 8, 2, 46),
+          child: Icon(
+            Icons.person_sharp,
+            color: Colors.white,
+            // size: 15,
           ),
         ),
-        leading: const Padding(
-          padding: EdgeInsets.all(5.0),
-          child: CircleAvatar(
-            backgroundColor: Color.fromARGB(200, 8, 2, 46),
-            child: Icon(
-              Icons.person_sharp,
-              color: Colors.white,
-              // size: 15,
-            ),
-          ),
-        ),
-        //TODO: Change notification Icon if active
-        actions: const [Icon(Icons.notifications_none)]);
+      ),
+      //TODO: Change notification Icon if active
+      actions: const [
+        Icon(Icons.notifications_none),
+      ],
+    );
   }
 }
-
-
 
 final customTheme = ThemeData(
   primaryColor: const Color.fromARGB(97, 8, 25, 46),
